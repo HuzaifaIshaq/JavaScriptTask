@@ -19,87 +19,114 @@
 <body>
 
     <section class="py-5 text-center bg-light">
-  <div class="container">
-    <h1 class="display-4 fw-bold"> JavaScript Adventure: Tasks Unleashed!</h1>
-    <p class="lead mb-4">Task 1: Temperature Checker.</p>
-    <p class="lead mb-4">Task 2: Number Comparison</p>
-    <p class="lead mb-4">Task 3: Simple Voting Eligibility</p>
-    <p class="lead mb-4">Task 4: Divisible by 3 and 5</p>
-    <p class="lead mb-4">Task 5: Traffic Light Message</p>
-    
-  </div>
-</section>
+        <div class="container">
+            <h1 class="display-4 fw-bold"> JavaScript Adventure: Tasks Unleashed!</h1>
+            <p class="lead mb-4">Task 1: Temperature Checker.</p>
+            <p class="lead mb-4">Task 2: Number Comparison</p>
+            <p class="lead mb-4">Task 3: Simple Voting Eligibility</p>
+            <p class="lead mb-4">Task 4: Divisible by 3 and 5</p>
+            <p class="lead mb-4">Task 5: Traffic Light Message</p>
+
+        </div>
+    </section>
 
     <div class=".container-sm">
         <div class="row">
 
             <div class="col">
                 <div class="card"">
-                    <div class="card-body">
-                        <h5 class="card-title">Number comparison</h5>
-                        <input id="comparison1" type="number" class="form-control"
-                            placeholder="Temperature in Celsius..." aria-label="Username"
-                            aria-describedby="addon-wrapping">
-                        <input id="comparison2" type="number" class="form-control"
-                            placeholder="Temperature in Celsius..." aria-label="Username"
-                            aria-describedby="addon-wrapping">
-                        <a onclick="comparison()" href="#" class="btn btn-primary">Go somewhere</a>
-                        <p id="result"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Temperature Check Module</h5>
-                        <input id="temperature" type="number" class="form-control"
-                            placeholder="Temperature in Celsius..." aria-label="Username"
-                            aria-describedby="addon-wrapping">
-
-                        <a onclick="checkweather()" href="#" class="btn btn-primary">Check Weather</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" >
-                    <div class="card-body">
-                        <h5 class="card-title">Division by Odd</h5>
-                        <input id="division" type="number" class="form-control" placeholder="Enter A Number..."
-                            aria-label="Username" aria-describedby="addon-wrapping">
-                        <a onclick="division()" href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" >
-                    <div class="card-body">
-                        <h5 class="card-title">Vote ability</h5>
-                        <input id="voting" type="text" class="form-control" placeholder="Nationality"
-                            aria-label="Username" aria-describedby="addon-wrapping">
-                        <input id="votingage" type="number" class="form-control" placeholder="Youage?"
-                            aria-label="Username" aria-describedby="addon-wrapping">
-                        <a onclick="voting()" href="#" class="btn btn-primary">Check Your Vote</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Traffic Light System</h5>
-                        <input id="color" type="text" class="form-control" placeholder="Red, Green, Yellow..."
-                            aria-label="Username" aria-describedby="addon-wrapping">
-                        <a onclick="traffic()" href="#" class="btn btn-primary">Explain this Color</a>
-                    </div>
+                    <div class=" card-body">
+                    <h5 class="card-title">Number comparison</h5>
+                    <input id="comparison1" type="number" class="form-control" placeholder="Temperature in Celsius..."
+                        aria-label="Username" aria-describedby="addon-wrapping">
+                    <input id="comparison2" type="number" class="form-control" placeholder="Temperature in Celsius..."
+                        aria-label="Username" aria-describedby="addon-wrapping">
+                    <a onclick="comparison()" href="#" class="btn btn-primary">Go somewhere</a>
+                    <p id="result"></p>
                 </div>
             </div>
         </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Temperature Check Module</h5>
+                    <input id="temperature" type="number" class="form-control" placeholder="Temperature in Celsius..."
+                        aria-label="Username" aria-describedby="addon-wrapping">
+
+                    <a onclick="checkweather()" href="#" class="btn btn-primary">Check Weather</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Division by Odd</h5>
+                    <input id="divisioninput" type="number" class="form-control" placeholder="Enter A Number..."
+                        aria-label="Username" aria-describedby="addon-wrapping">
+                    <!-- Button trigger modal -->
+                    <button id="divisionbutton" onclick="division()" type="button" class="btn btn-primary"
+                        data-bs-toggle="modal" data-bs-target="#division">
+                        Launch demo modal
+                    </button>
+
+
+                    <!-- Modal -->
+                    <div id="division" class="modal fade" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+
+                                </div>
+                                <div class="modal-body" id="divisionresult">
+                                    Yeh Result hai.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <a onclick="division()" href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Vote ability</h5>
+                    <input id="voting" type="text" class="form-control" placeholder="Nationality" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                    <input id="votingage" type="number" class="form-control" placeholder="Youage?" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                    <a onclick="voting()" href="#" class="btn btn-primary">Check Your Vote</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Traffic Light System</h5>
+                    <input id="color" type="text" class="form-control" placeholder="Red, Green, Yellow..."
+                        aria-label="Username" aria-describedby="addon-wrapping">
+                    <a onclick="traffic()" href="#" class="btn btn-primary">Explain this Color</a>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
 
     <script>
-
+        $('#division').on('shown.bs.modal', function () {
+            $('#divisionbutton').trigger('focus')
+        })
 
         function checkweather() {
             let temp = parseFloat(document.getElementById("temperature").value);
@@ -134,16 +161,16 @@
         }
 
         function division() {
-            let number = parseFloat(document.getElementById("division").value);
+            let number = parseFloat(document.getElementById("divisioninput").value);
             if (number % 3 == 0) {
-                alert("Only Divisible by 3");
+                document.getElementById("divisionresult").innerHTML = "Only Divisible by 3";
             } else if (number % 5 == 0) {
-                alert("only divisible by 5");
+                document.getElementById("divisionresult").innerHTML = "Only Divisible by 5";
             }
             else if (number % 3 == 0 && number % 5 == 0) {
-                alert("Divisible by both 3 and 5");
+                document.getElementById("divisionresult").innerHTML = "Divisble by both 3 and 5";
             } else {
-                alert("Not Divisible by both");
+                document.getElementById("divisionresult").innerHTML = "Not divisible by both.";
             }
 
         }
@@ -151,7 +178,7 @@
 
         function voting() {
             let nationality = document.getElementById("voting").value;
-            let votingage = parseFloat(document.getElementById("votingage").value);      
+            let votingage = parseFloat(document.getElementById("votingage").value);
             if (nationality == "Pakistani" && votingage >= "18") {
                 alert("You can vote");
             }
